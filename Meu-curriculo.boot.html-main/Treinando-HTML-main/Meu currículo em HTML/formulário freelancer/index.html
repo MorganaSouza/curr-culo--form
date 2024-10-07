@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Freelancer</title>
+    <link rel="stylesheet" href="../public/css/formstyle.css">
+</head>
+<body>
+
+    <form id="contactForm">
+        <fieldset>
+            <legend>Formulário de Freelancer</legend>
+        
+            <div class="form-group">
+                <label for="firstName" class="requiredCampos">Nome</label>
+                <input type="text" id="firstName" placeholder="Insira seu nome" name="firstName" required>
+            </div>
+            <div class="form-group">
+                <label for="lastName" class="requiredCampos">Sobrenome</label>
+                <input type="text" id="lastName" placeholder="Insira seu sobrenome" name="lastName" required>
+            </div>
+            <div class="form-group">
+                <label for="phone" class="requiredCampos">Telefone</label>
+                <input type="tel" id="phone" placeholder="(XX) XXXXX-XXXX" name="phone" pattern="\([0-9]{2}\) [0-9]{5}-[0-9]{4}" required>
+            </div>
+            <div class="form-group">
+                <label for="email" class="requiredCampos">E-mail</label>
+                <input type="email" id="email" placeholder="Insira seu e-mail" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message" class="requiredCampos">Mensagem</label>
+                <textarea id="message" placeholder="Informe o que deseja." name="message" rows="4" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="language">Língua</label>
+                <select id="language" name="language" required>
+                    <option value="portuguese">Português (pt-br)</option>
+                    <option value="english">Inglês</option>
+                    <option value="spanish">Espanhol</option>
+                    <option value="french">Francês</option>  
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="fileUpload">Upload de arquivo (PDF, DOC, DOCX, JPEG, PNG)</label>
+                <input type="file" id="fileUpload" name="fileUpload"
+                 accept=".pdf, .doc, .docx, .jpeg, .jpg, .png">
+            </div>
+            <div class="form-group">
+                <label>As linguagens que você prefere?</label>
+                <select name="languages[]" required>
+                    <option value="javascript">JavaScript</option>
+                    <option value="html">HTML</option>
+                    <option value="python">Python</option>
+                    <option value="java">Java</option>
+                    <option value="c">C</option>
+                    <option value="csharp">C++</option>
+                    <option value="php">PHP</option>
+                </select>
+            </div>
+            <div class="form-group">
+    <label>Banco de Dados</label>
+    <div>
+        <div class="radio-group">
+            <input type="radio" id="mysql" name="database" value="mysql" required>
+            <label for="mysql">MySQL</label>
+        </div>
+        <div class="radio-group">
+            <input type="radio" id="postgresql" name="database" value="postgresql">
+            <label for="postgresql">PostgreSQL</label>
+        </div>
+        <div class="radio-group">
+            <input type="radio" id="mongodb" name="database" value="mongodb">
+            <label for="mongodb">MongoDB</label>
+        </div>
+        <div class="radio-group">
+            <input type="radio" id="na" name="database" value="na">
+            <label for="na">N/A</label>
+        </div>
+        <div class="radio-group">
+            <input type="radio" id="other" name="database" value="other">
+            <label for="other">Outra</label>
+        </div>
+    </div>
+</div>
+
+            </div>
+            <div class="form-group">
+                <label for="meetingShift" class="requiredCampos">Turno para Reuniões</label>
+                <select id="meetingShift" name="meetingShift" required>
+                    <option value="">Selecione</option>
+                    <option value="morning">Manhã</option>
+                    <option value="afternoon">Tarde</option>
+                    <option value="evening">Noite</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="meetingTime" class="requiredCampos">Horário Sugerido</label>
+                <input type="time" id="meetingTime" name="meetingTime" required>
+            </div>
+            <div class="form-group">
+                <label for="deliveryDate" class="requiredCampos">Data Prevista Entrega</label>
+                <input type="date" id="deliveryDate" name="deliveryDate" required>
+            </div>
+            <div class="form-buttons">
+                <button type="reset">Limpar</button>
+                <button type="submit">Enviar</button>
+            </div>
+            <p class="required-info required">Campos Obrigatórios</p>
+        </fieldset>
+    </form>
+
+    <script src="../public/js/formFreelancer.js"></script> <!-- Incluindo o arquivo JavaScript -->
+</body>
+<footer>
+    <span>Copyright © 2024 Morgana Souza. Todos os Direitos Reservados.</span>
+</footer>
+
+</html>

@@ -1,0 +1,149 @@
+/* Estilos Gerais */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ccd8e4;
+    padding: 20px;
+    
+}
+
+fieldset {
+    border: 2px solid #050505; /* Altere a cor da borda, se desejar */
+    background-color: #ffffff;
+    margin-bottom: 15px;
+    max-width: 600px; /* Defina uma largura máxima */
+    margin-left: auto; /* Centraliza o fieldset */
+    margin-right: auto; /* Centraliza o fieldset */
+    height: 50%;
+}
+
+
+/* Estilo do Título */
+legend {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000000;
+    margin: 0 0 15px 20px;
+}
+
+.requiredCampos::after {
+    content: " *"; /* Asterisco indica campo obrigatório */
+    color: blue; /* Cor do asterisco */
+    margin-left: 5px; /* Espaçamento à esquerda do asterisco */
+}
+
+.required-info.required::before {
+    content: " *"; /* Adiciona o asterisco antes do texto */
+    color: blue; /* Define a cor do asterisco */
+    margin-right: 5px; /* Espaçamento à direita do asterisco */
+}
+
+/* Estilos dos Grupos de Formulário */
+.form-group {
+    display: flex; /* Usar flexbox para alinhar label e input */
+    align-items: center; /* Centraliza verticalmente os itens */
+    margin-bottom: 10px;
+   margin-left: auto; 
+   padding-left: 15px;
+   
+}
+
+.form-buttons {
+    margin-top: 20px; /* Espaçamento acima do texto */
+    color: rgb(0, 0, 0); /* Cor do texto */
+    font-size: 14px; /* Tamanho da fonte */
+    text-align: left; /* Alinhamento à esquerda */
+    margin-bottom: 0px;
+    padding-left: 15px;
+    padding-top: 50px;
+}
+
+
+
+/* Estilos dos Rótulos */
+label {
+    width: 150px; /* Largura fixa para os rótulos */
+    margin-right: 10px; /* Espaçamento à direita do rótulo */
+}
+
+/* Estilo dos Campos de Entrada */
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+select,
+textarea {
+    width: 250px; /* Largura padrão para os campos */
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+/* Estilo do campo de upload */
+input[type="file"] {
+   
+    padding: 5px;
+
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Validação */
+input.error, textarea.error {
+    border-color: red;
+}
+
+input.success, textarea.success {
+    border-color: green;
+}
+
+/* Estilo dos Botões */
+button {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #d7dbec;
+}
+
+/* Estilo do Texto do Link */
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.required-info {
+    margin-top: 10px; /* Espaçamento acima do texto */
+    color: rgb(0, 0, 0); /* Cor do texto */
+    font-size: 14px; /* Tamanho da fonte */
+    text-align: right; /* Alinhamento à esquerda */
+    
+}
+
+footer {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: small;
+    text-align: center;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    input[type="text"], input[type="email"], select, textarea {
+        font-size: 14px;
+        width: 100%; /* Ajustar para 100% em telas menores */
+    }
+}
